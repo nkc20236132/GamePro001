@@ -31,28 +31,13 @@ public class PlayerController : MonoBehaviour
         dir.x = Input.GetAxisRaw("Horizontal");
         dir.y = Input.GetAxisRaw("Vertical");
 
-        //向き
-        int muki = 0;
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            muki = 1;
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            muki = -1;
-        }
-
-
-        if (muki != 0)
-        {
-            transform.localScale = new Vector3(1, muki, 1);
-        }
 
 
         // speed m/s の速度でオブジェクトを移動させる
         transform.position += dir.normalized * speed * Time.deltaTime;
 
 
+   
 
 
 
