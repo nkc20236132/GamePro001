@@ -11,6 +11,7 @@ public class TimeDirector : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 60;
         this.timeGauge = GameObject.Find("timeGauge");
     }
 
@@ -21,12 +22,12 @@ public class TimeDirector : MonoBehaviour
 
     void Update()
     {
-        //
-        if (this.delta == 1)
+        delta += 1;
+        if (this.delta == 6)
         {
             this.delta = 0;
             //‚P•b‚ÅtimeGauge‚ğ‚OD‚O‚PŒ¸‚ç‚·
-            this.timeGauge.GetComponent<Image>().fillAmount -= 0.01f;
+            this.timeGauge.GetComponent<Image>().fillAmount -= 0.001f;
         }
 
         //ƒQ[ƒW‚ª‚O‚É‚È‚Á‚½‚çƒ^ƒCƒgƒ‹

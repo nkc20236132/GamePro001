@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    Animator animator;
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
         dir.x = Input.GetAxisRaw("Horizontal");
         dir.y = Input.GetAxisRaw("Vertical");
 
+        
 
 
         // speed m/s の速度でオブジェクトを移動させる
